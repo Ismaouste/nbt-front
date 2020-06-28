@@ -1,1 +1,29 @@
-<p>artist-list works!</p>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center white-text">Tous les artistes du NBT !</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Consultez toutes les infos sur les artistes de la nouvelle programmation.</h5>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax amber darken-1"></div>
+</div>
+
+<div class="row" *ngIf="artists">
+  <div class="col s12 m6" *ngFor="let artist of artists">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{artist.name}}<i
+          class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+  </div>
+</div>

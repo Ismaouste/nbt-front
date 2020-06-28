@@ -7,7 +7,6 @@ import {ConcertListComponent} from './component/concert-list/concert-list.compon
 import {HomeComponent} from './component/home/home.component';
 import {AdminComponent} from './component/admin/admin.component';
 
-
 const routes: Routes = [
   {path: 'artist/:id', component: ArtistComponent},
   {path: 'artists', component: ArtistListComponent},
@@ -16,9 +15,6 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
-
-
-
 ];
 
 @NgModule({

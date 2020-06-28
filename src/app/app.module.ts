@@ -14,6 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {AdminComponent} from './component/admin/admin.component';
 import { RegisterComponent } from './component/register/register.component';
+import { LoginComponent } from './component/login/login.component';
+import {NgxUiLoaderModule} from 'ngx-ui-loader';
+import {environment} from '../environments/environment';
 
 
 @NgModule({
@@ -28,13 +31,15 @@ import { RegisterComponent } from './component/register/register.component';
     FooterComponent,
     HomeComponent,
     AdminComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxUiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent],
