@@ -11,11 +11,11 @@ import {NgxUiLoaderService} from 'ngx-ui-loader';
 export class ArtistListComponent implements OnInit {
   artists: Artist[];
 
-  constructor(private artistServce: ArtistService, private loader : NgxUiLoaderService) { }
+  constructor(private artistService: ArtistService, private loader: NgxUiLoaderService) { }
 
   ngOnInit(): void {
     this.loader.start();
-    this.artistServce.getAllArtist().subscribe(value => {
+    this.artistService.getAllArtist().subscribe(value => {
       this.artists = value;
       this.loader.stop();
     });
